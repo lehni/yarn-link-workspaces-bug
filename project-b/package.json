@@ -1,0 +1,17 @@
+{
+  "name": "project-b",
+  "version": "1.0.0",
+  "packageManager": "yarn@3.2.0",
+  "scripts": {
+    "link": "yarn link ../project-a --all --relative"
+  },
+  "dependencies": {
+    "@project-a/package-a": "^1.0.0",
+    "@project-a/package-b": "^1.0.0"
+  },
+  "resolutions": {
+    "project-a": "portal:../project-a",
+    "@project-a/package-a": "portal:../project-a/packages/package-a",
+    "@project-a/package-b": "portal:../project-a/packages/package-b"
+  }
+}
